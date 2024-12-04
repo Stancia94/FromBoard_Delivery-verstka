@@ -1,0 +1,47 @@
+.advantages{
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__title{
+    @include xl3;
+    font-weight: 900;
+    align-self: center;
+
+  }
+  &__body{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(371px, 1fr));
+    justify-items: center;
+    gap: 24px;
+  }
+  &__card{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 30px 24px;
+  }
+  &__card-text{
+    display: flex;
+    flex-direction: column;
+    min-width: 249px;
+    max-width: 300px;
+    gap: 12px;
+  }
+  &__card-title{
+    @include xl2;
+    font-weight: 900;
+  }
+  &__card-descriptions{
+    @include sm;
+  }
+  @include laptop{
+    &__card-title{
+      @include xl;
+    }
+    &__card{
+      padding: 0;
+    }
+  }
+} 

@@ -1,0 +1,23 @@
+.burger{
+  display: none ;
+  width: 24px;
+  height: 16px;
+  position: relative;
+  background: transparent;
+  border: none;
+  line-height: none !important;
+  &::after{
+    display: block !important;
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: 4px;
+    top: 6px;
+    background-color: var(--color-accent-light);
+    box-shadow: 0 -6px var(--color-accent-light), 0 6px var(--color-accent-light);
+    border-radius: 100px;
+  }
+  @include laptop-small{
+   display: block;
+  }
+}

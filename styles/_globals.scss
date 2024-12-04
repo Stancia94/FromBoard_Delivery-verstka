@@ -1,0 +1,44 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  color: var(--color-dark);
+  background-color: var(--color-bg-main);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  @include base;
+}
+.size-xs{
+  @include xs;
+}
+.size-sm{
+  @include sm;
+}
+.size-lg{
+  @include lg;
+}
+.size-xl{
+  @include xl;
+}
+.size-xl2{
+  @include xl2;
+}
+.size-xl3{
+  @include xl3;
+}
+.size-xl4{
+  @include xl4;
+}
+.weight-light{
+  font-weight: 300;
+}
+.weight-bold{
+  font-weight: 700;
+}
+.weight-black{
+  font-weight: 900;
+}
+.weight-bold{
+  font-weight: 700;
+}
+

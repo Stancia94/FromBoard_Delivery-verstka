@@ -1,0 +1,163 @@
+.header {
+  padding: 24px 0;
+  background-color: var(--color-white);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    text-align: end;
+  }
+
+  &__info-mobile {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 4px 32px;
+    @include sm;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__number {
+    position: relative;
+  }
+
+  &__number::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: var(--color-accent);
+    width: 2px;
+    margin-left: -12px;
+  }
+
+  &__number-tel {
+    @include xl4;
+    font-weight: 900;
+
+  }
+
+  &__number-text {
+    @include xl2;
+    font-weight: 300;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu-list {
+    display: flex;
+    column-gap: 24px;
+  }
+
+  &__menu-item {
+    font-weight: 700;
+  }
+
+  &__menu-link {
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+
+  @include laptop-large {
+    &__number-tel {
+      @include xl3;
+    }
+
+    &__number-text {
+      @include xl;
+    }
+
+    &__info {
+      @include xs;
+    }
+  }
+
+  @include semi-laptop {
+    &__info {
+      display: none;
+    }
+
+    &__number::before {
+      display: none;
+    }
+    &__menu {
+      padding: 12px 0;
+      border-top: 2px solid var(--color-accent);
+      border-bottom: 2px solid var(--color-accent);
+    }
+  }
+
+  @include laptop {
+    &__container {
+      row-gap: 12px;
+    }
+
+    &__number-tel {
+      @include xl2;
+    }
+
+    &__number-text {
+      @include base;
+    }
+
+  
+
+  }
+
+  @include laptop-small {
+    &__menu {
+      display: none;
+    }
+
+    &__info-mobile {
+      display: none;
+    }
+
+    &__number-tel {
+      @include xl;
+    }
+
+    &__number-text {
+      display: none;
+    }
+
+    .logo__image {
+      width: 243px;
+    }
+
+    & {
+      padding: 8px 0;
+    }
+
+    &__contacts {
+      gap: 16px;
+    }
+  }
+
+  @include semi-laptop-above {
+    &__info-mobile {
+      display: none;
+    }
+  }
+
+}

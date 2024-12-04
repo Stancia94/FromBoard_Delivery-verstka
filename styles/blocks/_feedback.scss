@@ -1,0 +1,23 @@
+.feedback{
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  &__title{
+    @include xl3;
+    font-weight:900;
+  }
+  &__nav{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 calc( var(--container-padding-x) + 23px);
+  }
+  &__left,&__right:hover{
+    cursor: pointer;
+  }
+}

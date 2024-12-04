@@ -1,0 +1,89 @@
+$desktop: 1920px;
+$desktop-above: 1921px;
+
+$laptop-large: 1536px;
+$laptop-large-above: 1537px;
+
+$laptop: 1024px;
+$laptop-above: 1025px;
+
+$semi-laptop:1250px;
+$semi-laptop-above:1251px;
+
+$laptop-small: 758px;
+$laptop-small-above: 759px;
+
+////////////
+@mixin desktop {
+  @media(max-width:$desktop) {
+    @content;
+  }
+}
+
+@mixin laptop-large {
+  @media(max-width: $laptop-large) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media(max-width:$laptop) {
+    @content;
+  }
+}
+@mixin semi-laptop {
+  @media(max-width:$semi-laptop) {
+    @content;
+  }
+}
+@mixin semi-laptop-above {
+  @media(min-width:$semi-laptop-above) {
+    @content;
+  }
+}
+@mixin laptop-small {
+  @media(max-width:$laptop-small) {
+    @content;
+  }
+}
+
+///////above
+@mixin desktop-above {
+  @media(min-width:$desktop-above) {
+    @content;
+  }
+}
+
+@mixin laptop-large-above {
+  @media(min-width: $laptop-large-above) {
+    @content;
+  }
+}
+
+@mixin laptop-above {
+  @media(min-width:$laptop-above) {
+    @content;
+  }
+}
+
+@mixin laptop-small-above {
+  @media(min-width:$laptop-small-above) {
+    @content;
+  }
+}
+/////////
+@mixin hover {
+
+  @media (hover:hover) {
+    &:hover {
+      @content;
+    }
+  }
+  @media(hover:none) {
+    &:active {
+      @content;
+    }
+  }
+
+}
+

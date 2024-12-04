@@ -1,0 +1,40 @@
+.calc{
+  padding: 24px 130px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 28px;
+  &__title{
+    @include xl3;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 16px;
+    text-align: center;
+    max-width: 358px;
+  }
+  &__descriptions{
+    @include base;
+    font-weight: 400;
+    text-align: center;
+  }
+  &__form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 24px;
+  }
+  &__form-item:first-child, &__form-item:last-child{
+    grid-column: span 2;
+  }
+  @include laptop-large{
+    padding: 24px 210px;
+  }  
+  @include laptop{
+    padding: 24px 100px;
+  }
+}

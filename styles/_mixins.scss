@@ -1,0 +1,73 @@
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px,
+    #{$max / 1920 * 100}vw,
+    #{$max}px);
+}
+@mixin fluid-width($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px,
+    #{$max / 1920 * 100}vw,
+    #{$max}px);
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  }
+
+  @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abc-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50%, -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  aspect-ratio: 1;
+}
+
+@mixin xs {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin sm {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin base {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin lg {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@mixin xl {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin xl2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+@mixin xl3 {
+  font-size: 30px;
+  line-height: 36px;
+}
+@mixin xl4 {
+  font-size: 36px;
+  line-height: 40px;
+}

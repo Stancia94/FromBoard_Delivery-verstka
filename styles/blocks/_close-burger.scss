@@ -1,0 +1,31 @@
+.close-burger{
+  display: block !important;
+  width: 24px;
+  height: 16px;
+  position: relative;
+  background: transparent;
+  border: none;
+  line-height: none !important;
+  &::after{
+    display: block !important;
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: 4px;
+    top: 6px;
+    background-color: var(--color-accent-light);
+    transform: rotate(45deg);
+    border-radius: 100px;
+  }
+  &::before{
+    display: block !important;
+    position: absolute;
+    content: "";
+    width: inherit;
+    height: 4px;
+    top: 6px;
+    background-color: var(--color-accent-light);
+    transform: rotate(-45deg);
+    border-radius: 100px;
+  }
+}

@@ -1,0 +1,22 @@
+@import  'reset',
+  'fonts',
+  'variables',
+  'media',
+  'mixins',
+  'globals',
+  'utils';
+
+@import './blocks/header',
+        './blocks/button',
+        './blocks/burger',
+        './blocks/mobile-overlay',
+        './blocks/close-burger',
+        './blocks/hero',
+        './blocks/calc',
+        './blocks/input',
+        './blocks/advantages',
+        './blocks/assurance',
+        './blocks/feedback',
+        './blocks/list',
+        './blocks/questions',
+        './blocks/footer';
