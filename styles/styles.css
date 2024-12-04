@@ -112,7 +112,7 @@ a {
   --color-white: #F9FAFB;
   --color-gray-text: #9CA3AF;
   --color-bg-main: #E5E7EB;
-  --color-accent-light:#A78BFA;
+  --color-accent-light: #A78BFA;
   --border: 2px solid var(--color-dark);
   --border-radius-small: 4px;
   --border-radius-medium: 12px;
@@ -809,6 +809,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 0 calc(var(--container-padding-x) + clamp(6.188rem, 3.973rem + 3.46vw, 8.125rem));
 }
 .feedback__title {
   font-size: 30px;
@@ -830,22 +831,24 @@ body {
 .list {
   display: flex;
   gap: 24px;
-  justify-content: space-between;
-  width: 100%;
-  transform: translateX(-50%);
   transition: all 0.3s ease;
+  height: auto;
 }
 .list__wrapper {
   width: 100%;
   overflow: hidden;
-  padding: 0 130px;
   margin-top: 32px;
 }
 .list__card {
   padding: 32px 43px;
   background-color: var(--color-white);
-  min-width: 49%;
   position: relative;
+  min-width: 49%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: var(--border-radius-big);
 }
 @media (max-width: 1024px) {
   .list__card {
@@ -856,7 +859,6 @@ body {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  height: 224px;
   margin-bottom: 30px;
   width: auto;
 }
@@ -874,6 +876,16 @@ body {
 }
 .list__card-decor path {
   fill: #DDD6FE;
+}
+@media (max-width: 1536px) {
+  .list__card-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .list__card-author {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .questions__container {

@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding: 0 calc(var(--container-padding-x) + clamp(6.188rem, 3.973rem + 3.46vw, 8.125rem));
   }
   &__title{
     @include xl3;
