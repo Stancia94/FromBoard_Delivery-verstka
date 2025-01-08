@@ -273,6 +273,19 @@ body {
   overflow: hidden !important;
 }
 
+.col-sz-2 {
+  grid-column: span 2;
+}
+
+.legend {
+  position: absolute;
+  bottom: 37px;
+  left: 30px;
+  background: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .header {
   padding: 24px 0;
   background-color: var(--color-white);
@@ -679,9 +692,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   gap: 24px;
-}
-.calc__form-item:first-child, .calc__form-item:last-child {
-  grid-column: span 2;
+  width: 100%;
 }
 @media (max-width: 1536px) {
   .calc {
@@ -699,6 +710,7 @@ body {
   color: var(--color-dark);
   border-radius: var(--border-radius-small);
   outline: 2px solid var(--color-dark);
+  width: 100%;
 }
 .input::-moz-placeholder {
   color: var(--color-gray-text);
