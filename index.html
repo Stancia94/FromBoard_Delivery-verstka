@@ -254,14 +254,14 @@
           </article>
           <article class="advantages__card">
             <div class="advantages__card-img">
-              <img src="images/Icon/clear info.svg" alt="">
+              <img src="images/Icon/clearInfo.svg" alt="">
             </div>
             <div class="advantages__card-text">
               <div class="advantages__card-title">
                 <h3>Прозрачность работы</h3>
               </div>
               <div class="advantages__card-descriptions">
-                Мы предоставляем полный контроль над каждым этапом
+                Мы предоставляем полный контроль над каждым этапом
                 доставки, от момента заказа до момента прибытия
                 заказа
               </div>
@@ -310,7 +310,7 @@
             </header>
           </article>
           <article class="assurance__card">
-            <div class=assurance__card-img">
+            <div class="assurance__card-img">
               <img src="images/assurance/usa-serf.png"
                 alt="Русский сертификат, подписан">
             </div>
@@ -319,7 +319,7 @@
             </header>
           </article>
           <article class="assurance__card">
-            <div class=assurance__card-img">
+            <div class="assurance__card-img">
               <img src="images/assurance/japan-serf.png"
                 alt="Русский сертификат, подписан">
             </div>
@@ -328,7 +328,7 @@
             </header>
           </article>
           <article class="assurance__card">
-            <div class=assurance__card-img">
+            <div class="assurance__card-img">
               <img src="images/assurance/britain-serf.png"
                 alt="Русский сертификат, подписан">
             </div>
@@ -585,37 +585,34 @@
             <p class="mobile-overlay__number-tel">+7 (800) 123 45-67
             </p>
           </div>
-          <button class="close-burger"
-            onclick="mobileOverlay.close()">
-            <span class="visually-hidden">Закрыть меню
-              навигации</span>
-          </button>
         </div>
+
       </div>
       <nav class="mobile-overlay__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#">
+        <ul class="mobile-overlay__menu-list">
+          <li class="mobile-overlay__menu-item">
+            <a class="mobile-overlay__menu-link" href="#">
               Калькулятор
             </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#">
+          <li class="mobile-overlay__menu-item">
+            <a class="mobile-overlay__menu-link" href="#">
               О нас
             </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#">
+          <li class="mobile-overlay__menu-item">
+            <a class="mobile-overlay__menu-link" href="#">
               Гарантии
             </a>
           </li>
-          <li class="header__menu-item">
-            <a class="header__menu-link" href="#">
+          <li class="mobile-overlay__menu-item">
+            <a class="mobile-overlay__menu-link" href="#">
               Отзывы
             </a>
           </li>
         </ul>
-        <button class="button">Оставить заявку</button>
+        <button class="mobile-overlay__button button ">Оставить
+          заявку</button>
       </nav>
       <div class="mobile-overlay__info-mobile">
         <p>Доставляем товары <br> из заграницы в Россию</p>
@@ -624,6 +621,11 @@
       </div>
     </div>
     </div>
+    <div class="mobile-overlay__wrapper-btn"> <button
+        class="close-burger" onclick="mobileOverlay.close()">
+        <span class="visually-hidden">Закрыть меню
+          навигации</span>
+      </button></div>
   </dialog>
   <script src="./js/slider.js"></script>
   <script src="./js/handlingForm.js"></script>

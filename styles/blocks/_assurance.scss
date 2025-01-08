@@ -1,10 +1,15 @@
-.assurance{
-  &__container{
+.assurance {
+  &__container {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @include laptop-small {
+      align-items: center;
+    }
   }
-  &__head{
+
+  &__head {
     display: flex;
     flex-direction: column;
     max-width: 756px;
@@ -12,36 +17,43 @@
     text-align: center;
     gap: 12px;
   }
-  &__title{
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 2fr));
+    justify-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  &__title {
     @include xl3;
     font-weight: 900;
   }
-  &__card{
+
+  &__card {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
     max-width: 340px;
   }
-  &__card-img{
+
+  &__card-img {
     width: 100%;
   }
-  &__card-text{
+
+  &__card-text {
     @include lg;
     font-weight: 900;
     text-align: center;
   }
-  &__body{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 2fr));
-    justify-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 36px;
-  }
-  &__button{
+
+
+  &__button {
     align-self: center;
-    border-radius: var(  --border-radius-medium);
+    border-radius: var(--border-radius-medium);
     font-weight: 900;
   }
 }

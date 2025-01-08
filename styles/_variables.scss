@@ -17,8 +17,10 @@
   --container-width-laptop-large: clamp(48rem, 15.75rem + 50.391vw, 64.125rem);
   --container-width-laptop: clamp(40rem, 17.203rem + 48.12vw, 48rem);
   --container-width-laptop-small: 640px;
+  --container-width-smartphone: 300px;
 
   --container-padding-x: 59px;
+  --container-padding-x-less-laptop: clamp(0.938rem, -2.135rem + 12.291vw, 3.688rem);
 
   --section-padding-y: 36px;
   --section-padding-y-laptop: 24px;

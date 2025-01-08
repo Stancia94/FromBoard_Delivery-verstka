@@ -12,6 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 10px;
+  }
+
+  &__logo {
+    margin-right: auto;
   }
 
   &__info {
@@ -35,6 +40,10 @@
 
   &__number {
     position: relative;
+
+    @media (max-width:600px) {
+      display: none;
+    }
   }
 
   &__number::before {
@@ -100,6 +109,7 @@
     &__number::before {
       display: none;
     }
+
     &__menu {
       padding: 12px 0;
       border-top: 2px solid var(--color-accent);
@@ -120,7 +130,7 @@
       @include base;
     }
 
-  
+
 
   }
 
@@ -160,4 +170,9 @@
     }
   }
 
+  @include smartphone {
+    &__number-tel {
+      display: none;
+    }
+  }
 }

@@ -6,6 +6,9 @@
   align-items: center;
   justify-content: space-between;
   row-gap: 28px;
+  align-self: center;
+  max-width: 100%;
+
 
   &__title {
     @include xl3;
@@ -39,10 +42,14 @@
   // }
 
   @include laptop-large {
-    padding: 24px 210px;
+    padding: 24px 180px;
   }
 
   @include laptop {
-    padding: 24px 100px;
+    padding: 24px 50px;
+  }
+
+  @media (max-width:480px) {
+    padding: 24px 0px;
   }
 }

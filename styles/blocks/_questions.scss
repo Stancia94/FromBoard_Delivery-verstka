@@ -1,26 +1,31 @@
-.questions{
-  &__container{
+.questions {
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 64px  0;
+    padding-top: 64px;
+    padding-bottom: 64px;
     background-color: var(--color-white);
   }
-  &__title{
+
+  &__title {
     @include xl3;
     font-weight: 900;
     text-align: center;
     margin-bottom: 32px;
   }
-  &__form{
+
+  &__form {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
-  &__form-item:nth-last-child(-n+2){
+
+  &__form-item:nth-last-child(-n+2) {
     grid-column: span 2;
   }
-  textarea{
+
+  textarea {
     resize: none;
   }
 }

@@ -20,10 +20,13 @@
   }
 
   @include laptop-small {
-    max-width: calc(var(--container-width-laptop-small) + var(--container-padding-x)*2);
-
+    max-width: calc(var(--container-width-laptop-small) + var(--container-padding-x-less-laptop)*2);
+    padding: 0 var(--container-padding-x-less-laptop);
   }
 
+  @include smartphone {
+    max-width: calc(var(--container-width-smartphone) + var(--container-padding-x-less-laptop)*2);
+  }
 }
 
 .pd-block {
@@ -63,6 +66,8 @@
       padding-bottom: calc(var(--section-padding-y-laptop-small)*2);
     }
   }
+
+
 }
 
 .visually-hidden {

@@ -4,35 +4,39 @@
   padding: 24px 0;
   margin: 0;
   border: none;
-  &:modal{
+
+  &:modal {
     max-width: 100%;
     border-radius: 0 0 24px 24px;
     background-color: var(--color-white);
   }
+
   &::backdrop {
     height: 100%;
     background-color: rgba($color: #000000, $alpha: 0.25);
   }
-  padding: 24px 0;
-  background-color: var(--color-white);
+
   &__container {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+
   }
 
   &__body {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
-  &__info-mobile{
+
+  &__info-mobile {
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
     @include sm;
   }
+
   &__contacts {
     display: flex;
     align-items: center;
@@ -42,10 +46,10 @@
   &__number {
     position: relative;
   }
+
   &__number-tel {
     @include xl;
     font-weight: 900;
-
   }
 
   &__number-text {
@@ -66,6 +70,9 @@
   &__menu-list {
     display: flex;
     column-gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   &__menu-item {
@@ -77,8 +84,45 @@
       color: var(--color-accent);
     }
   }
-  .logo__image{
+
+
+  .logo__image {
     width: 243px;
     height: 74px;
+  }
+
+  &__wrapper-btn {
+    position: absolute;
+    top: 20px;
+    right: var(--container-padding-x-less-laptop);
+  }
+
+
+  @media (max-width:559px) {
+    .logo__image {
+      width: 150px;
+    }
+
+    &__number-tel {
+      @include base;
+    }
+  }
+
+  @include laptop-small {
+    @include sm;
+
+    &__info-mobile {
+      @include xs;
+    }
+
+    &__button {
+      @include xs;
+    }
+  }
+
+  @media (max-width:340px) {
+    &__number-tel {
+      @include xs;
+    }
   }
 }
