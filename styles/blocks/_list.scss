@@ -3,11 +3,11 @@
   gap: 24px;
   transition: all 0.3s ease;
   height: auto;
- 
-  &__wrapper {    
+
+  &__wrapper {
     width: 100%;
     overflow: hidden;
-    margin-top: 32px; 
+    margin-top: 32px;
   }
 
   &__card {
@@ -15,15 +15,19 @@
     background-color: var(--color-white);
     position: relative;
     min-width: 49%;
-    height: auto;
+    border-radius: var(--border-radius-big);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: var( --border-radius-big);
+
     @include laptop {
       min-width: 100%;
     }
-    
+
+    @include laptop-small {
+      height: fit-content;
+      display: block;
+    }
   }
 
   &__card-text {
@@ -37,13 +41,14 @@
     @include xl2;
     font-weight: 300;
     color: #6B7280;
+    position: relative;
   }
 
   &__card-decor {
     position: absolute;
     line-height: 0;
-    bottom: 40px;
-    right: 18px;
+    bottom: -10px;
+    right: 0px;
 
     path {
       fill: #DDD6FE;

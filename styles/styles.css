@@ -293,7 +293,7 @@ svg {
   position: absolute;
   bottom: 37px;
   left: 30px;
-  background: white;
+  background-color: var(--color-white);
   font-size: 15px;
   font-weight: bold;
 }
@@ -672,6 +672,12 @@ svg {
   font-size: 20px;
   line-height: 28px;
 }
+@media (max-width: 480px) {
+  .hero__text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
 .hero__img {
   width: 100%;
   height: 100%;
@@ -723,7 +729,7 @@ svg {
 }
 
 .calc {
-  padding: 24px 130px;
+  padding: 24px clamp(2.5rem, -20rem + 23.438vw, 8.125rem);
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
@@ -770,7 +776,7 @@ svg {
 }
 @media (max-width: 480px) {
   .calc {
-    padding: 24px 0px;
+    padding: 24px 5px;
   }
 }
 
@@ -962,15 +968,21 @@ svg {
   background-color: var(--color-white);
   position: relative;
   min-width: 49%;
-  height: auto;
+  border-radius: var(--border-radius-big);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: var(--border-radius-big);
 }
 @media (max-width: 1024px) {
   .list__card {
     min-width: 100%;
+  }
+}
+@media (max-width: 758px) {
+  .list__card {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: block;
   }
 }
 .list__card-text {
@@ -985,12 +997,13 @@ svg {
   line-height: 32px;
   font-weight: 300;
   color: #6B7280;
+  position: relative;
 }
 .list__card-decor {
   position: absolute;
   line-height: 0;
-  bottom: 40px;
-  right: 18px;
+  bottom: -10px;
+  right: 0px;
 }
 .list__card-decor path {
   fill: #DDD6FE;
@@ -1025,6 +1038,8 @@ svg {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  min-width: 290px;
+  width: 70%;
 }
 .questions__form-item:nth-last-child(-n+2) {
   grid-column: span 2;

@@ -19,6 +19,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    min-width: 290px;
+    width: 70%;
   }
 
   &__form-item:nth-last-child(-n+2) {
